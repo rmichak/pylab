@@ -29,3 +29,5 @@ npm-debug.log*
 .idea/
 *.swp
 *.swo
+data.db-shm
+data.db-wal
