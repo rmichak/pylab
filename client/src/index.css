@@ -1,0 +1,269 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* DARK IDE THEME — Always dark, like the reference image */
+:root {
+  --button-outline: rgba(255, 255, 255, 0.1);
+  --badge-outline: rgba(255, 255, 255, 0.05);
+  --opaque-button-border-intensity: 9;
+  --elevate-1: rgba(255, 255, 255, 0.04);
+  --elevate-2: rgba(255, 255, 255, 0.09);
+  --background: 220 20% 8%;
+  --foreground: 210 20% 90%;
+  --border: 220 12% 18%;
+  --card: 220 18% 10%;
+  --card-foreground: 210 20% 90%;
+  --card-border: 220 12% 15%;
+  --sidebar: 220 20% 10%;
+  --sidebar-foreground: 210 20% 90%;
+  --sidebar-border: 220 12% 16%;
+  --sidebar-primary: 142 60% 45%;
+  --sidebar-primary-foreground: 0 0% 100%;
+  --sidebar-accent: 220 14% 16%;
+  --sidebar-accent-foreground: 210 20% 90%;
+  --sidebar-ring: 142 60% 45%;
+  --popover: 220 18% 12%;
+  --popover-foreground: 210 20% 90%;
+  --popover-border: 220 12% 18%;
+  --primary: 142 60% 45%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 220 14% 16%;
+  --secondary-foreground: 210 20% 90%;
+  --muted: 220 12% 16%;
+  --muted-foreground: 215 10% 55%;
+  --accent: 220 14% 16%;
+  --accent-foreground: 210 20% 90%;
+  --destructive: 0 72% 50%;
+  --destructive-foreground: 0 0% 100%;
+  --input: 220 12% 22%;
+  --ring: 142 60% 45%;
+  --chart-1: 142 60% 50%;
+  --chart-2: 200 60% 50%;
+  --chart-3: 280 60% 55%;
+  --chart-4: 40 80% 55%;
+  --chart-5: 20 80% 55%;
+  --font-sans: 'DM Sans', 'Inter', sans-serif;
+  --font-serif: Georgia, serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+  --radius: 0.375rem;
+  --shadow-2xs: 0px 2px 0px 0px hsl(0 0% 0% / 0);
+  --shadow-xs: 0px 2px 0px 0px hsl(0 0% 0% / 0);
+  --shadow-sm: 0px 1px 2px 0px hsl(0 0% 0% / 0.2);
+  --shadow: 0px 1px 3px 0px hsl(0 0% 0% / 0.3);
+  --shadow-md: 0px 4px 6px -1px hsl(0 0% 0% / 0.3);
+  --shadow-lg: 0px 10px 15px -3px hsl(0 0% 0% / 0.3);
+  --shadow-xl: 0px 20px 25px -5px hsl(0 0% 0% / 0.3);
+  --shadow-2xl: 0px 25px 50px -12px hsl(0 0% 0% / 0.5);
+  --tracking-normal: 0em;
+  --spacing: 0.25rem;
+
+  --primary-border: hsl(var(--primary));
+  --secondary-border: hsl(var(--secondary));
+  --muted-border: hsl(var(--muted));
+  --accent-border: hsl(var(--accent));
+  --destructive-border: hsl(var(--destructive));
+  --sidebar-primary-border: hsl(var(--sidebar-primary));
+  --sidebar-accent-border: hsl(var(--sidebar-accent));
+}
+
+/* Force dark mode always */
+.dark {
+  --button-outline: rgba(255, 255, 255, 0.1);
+  --badge-outline: rgba(255, 255, 255, 0.05);
+  --opaque-button-border-intensity: 9;
+  --elevate-1: rgba(255, 255, 255, 0.04);
+  --elevate-2: rgba(255, 255, 255, 0.09);
+  --background: 220 20% 8%;
+  --foreground: 210 20% 90%;
+  --border: 220 12% 18%;
+  --card: 220 18% 10%;
+  --card-foreground: 210 20% 90%;
+  --card-border: 220 12% 15%;
+  --sidebar: 220 20% 10%;
+  --sidebar-foreground: 210 20% 90%;
+  --sidebar-border: 220 12% 16%;
+  --sidebar-primary: 142 60% 45%;
+  --sidebar-primary-foreground: 0 0% 100%;
+  --sidebar-accent: 220 14% 16%;
+  --sidebar-accent-foreground: 210 20% 90%;
+  --sidebar-ring: 142 60% 45%;
+  --popover: 220 18% 12%;
+  --popover-foreground: 210 20% 90%;
+  --popover-border: 220 12% 18%;
+  --primary: 142 60% 45%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 220 14% 16%;
+  --secondary-foreground: 210 20% 90%;
+  --muted: 220 12% 16%;
+  --muted-foreground: 215 10% 55%;
+  --accent: 220 14% 16%;
+  --accent-foreground: 210 20% 90%;
+  --destructive: 0 72% 50%;
+  --destructive-foreground: 0 0% 100%;
+  --input: 220 12% 22%;
+  --ring: 142 60% 45%;
+  --chart-1: 142 60% 50%;
+  --chart-2: 200 60% 50%;
+  --chart-3: 280 60% 55%;
+  --chart-4: 40 80% 55%;
+  --chart-5: 20 80% 55%;
+  --shadow-2xs: 0px 2px 0px 0px hsl(0 0% 0% / 0);
+  --shadow-xs: 0px 2px 0px 0px hsl(0 0% 0% / 0);
+  --shadow-sm: 0px 1px 2px 0px hsl(0 0% 0% / 0.2);
+  --shadow: 0px 1px 3px 0px hsl(0 0% 0% / 0.3);
+  --shadow-md: 0px 4px 6px -1px hsl(0 0% 0% / 0.3);
+  --shadow-lg: 0px 10px 15px -3px hsl(0 0% 0% / 0.3);
+  --shadow-xl: 0px 20px 25px -5px hsl(0 0% 0% / 0.3);
+  --shadow-2xl: 0px 25px 50px -12px hsl(0 0% 0% / 0.5);
+
+  --primary-border: hsl(var(--primary));
+  --secondary-border: hsl(var(--secondary));
+  --muted-border: hsl(var(--muted));
+  --accent-border: hsl(var(--accent));
+  --destructive-border: hsl(var(--destructive));
+  --sidebar-primary-border: hsl(var(--sidebar-primary));
+  --sidebar-accent-border: hsl(var(--sidebar-accent));
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+  }
+}
+
+/* CodeMirror overrides */
+.cm-editor {
+  height: 100%;
+  font-size: 14px;
+  background: transparent !important;
+}
+
+.cm-editor .cm-scroller {
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+}
+
+.cm-editor .cm-gutters {
+  background: transparent !important;
+  border-right: 1px solid hsl(220, 12%, 18%) !important;
+}
+
+.cm-editor .cm-activeLineGutter {
+  background: hsl(220, 14%, 14%) !important;
+}
+
+.cm-editor .cm-activeLine {
+  background: hsl(220, 14%, 12%) !important;
+}
+
+.cm-editor .cm-cursor {
+  border-left-color: hsl(142, 60%, 55%) !important;
+}
+
+.cm-editor.cm-focused {
+  outline: none !important;
+}
+
+/* Terminal styling */
+.terminal-line {
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* Chat styling */
+.chat-message {
+  animation: fadeIn 0.2s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(220, 12%, 22%);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(220, 12%, 28%);
+}
+
+/* Paste protection toast */
+.paste-blocked-toast {
+  animation: shake 0.4s ease-in-out;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-4px); }
+  50% { transform: translateX(4px); }
+  75% { transform: translateX(-4px); }
+}
+
+/* Instructions markdown styling */
+.instructions-content h1 {
+  @apply text-lg font-bold text-primary mb-2;
+}
+
+.instructions-content h2 {
+  @apply text-base font-semibold text-primary mt-4 mb-2;
+}
+
+.instructions-content h3 {
+  @apply text-sm font-semibold text-primary mt-3 mb-1;
+}
+
+.instructions-content p {
+  @apply text-sm leading-relaxed mb-2 text-foreground/80;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.instructions-content ul {
+  @apply list-disc pl-5 mb-2 text-sm text-foreground/80;
+}
+
+.instructions-content ol {
+  @apply list-decimal pl-5 mb-2 text-sm text-foreground/80;
+}
+
+.instructions-content li {
+  @apply mb-1;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.instructions-content code {
+  @apply bg-muted px-1.5 py-0.5 rounded text-xs text-primary font-mono;
+}
+
+.instructions-content pre {
+  @apply bg-muted/60 p-3 rounded-md mb-3 overflow-x-auto text-xs;
+  max-width: 100%;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+}
+
+.instructions-content pre code {
+  @apply bg-transparent p-0 text-foreground/90;
+}
+
+.instructions-content strong {
+  @apply font-semibold text-foreground;
+}
